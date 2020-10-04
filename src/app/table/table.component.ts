@@ -7,7 +7,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  @Input() arr1;
+  @Input() arr;
   
   constructor() {
     // this.arr=[{id:1,product:"Mobile",price:20000},

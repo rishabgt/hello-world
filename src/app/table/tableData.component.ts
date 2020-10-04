@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: '[table-data]',
-  template: `<tr *ngFor="let data of arr2;let i = index">
+  template: `<tr *ngFor="let data of arr;let i = index">
   <td scope="col">{{data.id}}</td>
   <td scope="col">{{data.product}}</td>
   <td scope="col">{{data.price}}</td>
@@ -12,9 +12,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class TableDataComponent{
-  @Input()arr2;
+  @Input()arr;
     deleteRecord(i){
-            this.arr2.splice(i,1);
+            this.arr.splice(i,1);
     }
     constructor(){
         // this.arr=[{id:1,product:"Mobile",price:20000},
