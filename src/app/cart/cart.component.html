@@ -1,0 +1,16 @@
+<h1>The Items in the cart are</h1>
+<div class="container">
+    <div class="row" *ngFor="let items of cartItems;let i = index">
+        <div class="col-5 bg-secondary text-light h3 p-1">
+            {{items.name}}
+        </div>
+        <div class="col-5 bg-primary text-light h3 p-1">
+            {{items.price}}
+        </div>
+        <div class="col-2">
+            <button class="btn btn-danger" (click)="delete(i)">
+                Discard
+            </button>
+        </div>
+    </div>
+</div>

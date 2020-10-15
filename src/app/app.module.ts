@@ -12,6 +12,9 @@ import { CourseComponent } from './course/course.component';
 import { TableComponent } from './table/table.component';
 import { AddingdataComponent } from './addingdata/addingdata.component';
 import { SiblingsComponent } from './siblings/siblings.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ComponentProductComponent } from './component-product/component-product.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +26,16 @@ import { SiblingsComponent } from './siblings/siblings.component';
     TableDataComponent,
     AddingdataComponent,
     SiblingsComponent,
-    SiblingSecond
+    SiblingSecond,
+    NavbarComponent,
+    ComponentProductComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [SiblingsService],
-  bootstrap: [SiblingsComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

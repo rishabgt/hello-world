@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row border border-secondary mt-2 pb-0" *ngFor="let item of products;">
+        <div class="col-4 bg-success text-center text-light p-2 h2 m-0">
+            {{item.name}}
+        </div>
+        <div class="col-4 bg-primary text-center text-light p-2 h2 m-0">
+            {{item.price}}
+        </div>
+        <div class="col-4 m-0 p-0">
+            <button class="btn btn-info btn-lg w-100 h-100 m-0" (click)="add(item.name,item.price)">
+                    Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
