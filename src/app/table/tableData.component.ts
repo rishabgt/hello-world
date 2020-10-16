@@ -13,7 +13,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class TableDataComponent{
   @Input()arr;
-    deleteRecord(i){
+    deleteRecord(i:number){
             this.arr.splice(i,1);
     }
     constructor(){
