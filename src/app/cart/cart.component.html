@@ -1,10 +1,10 @@
 <h1>The Items in the cart are</h1>
-<div class="container">
+<div class="container mb-5">
     <div class="row" *ngFor="let items of cartItems;let i = index">
-        <div class="col-5 bg-secondary text-light h3 p-1">
+        <div class="col-5 h5 p-1 border border-secondary rounded">
             {{items.name}}
         </div>
-        <div class="col-5 bg-primary text-light h3 p-1">
+        <div class="col-5  h5 p-1 border border-secondary rounded">
             {{items.price}}
         </div>
         <div class="col-2">

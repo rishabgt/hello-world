@@ -1,13 +1,24 @@
-<div class="container">
+<div class="container mb-5">
+    <div class="row border border-secondary mt-2 pb-0" >
+        <div class="col-4  text-center bg-secondary text-light  p-2 h5 m-0">
+           Item Name
+        </div>
+        <div class="col-4  text-center bg-secondary text-light  p-2 h5 m-0">
+            Item Price
+        </div>
+        <div class="col-4  text-center bg-secondary text-light  p-2 h5 m-0">
+            Button
+        </div>
+    </div>
     <div class="row border border-secondary mt-2 pb-0" *ngFor="let item of products;">
-        <div class="col-4 bg-success text-center text-light p-2 h2 m-0">
+        <div class="col-4  text-center  p-2 h5 m-0">
             {{item.name}}
         </div>
-        <div class="col-4 bg-primary text-center text-light p-2 h2 m-0">
+        <div class="col-4  text-center p-2 h5 m-0">
             {{item.price}}
         </div>
         <div class="col-4 m-0 p-0">
-            <button class="btn btn-info btn-lg w-100 h-100 m-0" (click)="add(item.name,item.price)">
+            <button class="btn btn-info w-100 h-100 m-0" (click)="add(item.name,item.price)">
                     Add To Cart
             </button>
         </div>

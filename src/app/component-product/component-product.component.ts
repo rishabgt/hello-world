@@ -16,6 +16,14 @@ export class ComponentProductComponent implements OnInit {
     {
       "name": "Speaker",
       "price": 2000
+    },
+    {
+      "name": "Laptop",
+      "price": 67000
+    },
+    {
+      "name": "Earphone",
+      "price": 1500
     }
   ];
 

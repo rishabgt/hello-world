@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 import { TableComponent } from './table/table.component';
-import { AddingdataComponent } from './addingdata/addingdata.component';
 import { SiblingsComponent } from './siblings/siblings.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ComponentProductComponent } from './component-product/component-product.component';
@@ -24,7 +23,6 @@ import { CartComponent } from './cart/cart.component';
     TableComponent,
     TableHeadComponent,
     TableDataComponent,
-    AddingdataComponent,
     SiblingsComponent,
     SiblingSecond,
     NavbarComponent,

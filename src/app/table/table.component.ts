@@ -1,3 +1,4 @@
+import { CrudService } from './../crud.service';
 import { Input, ViewChild } from '@angular/core';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
@@ -7,16 +8,30 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  @Input() arr;
-  
-  constructor() {
-    // this.arr=[{id:1,product:"Mobile",price:20000},
-    //           {id:2,product:"Headphone",price:1000},
-    //           {id:3,product:"Laptop",price:50000},
-    //           {id:4,product:"Data Card",price:1500},
-    //           {id:3,product:"Speaker",price:2500},
-    //           {id:3,product:"Charger",price:1500}];
+  arr:any[];
+  @ViewChild("id") id;
+  @ViewChild("product") product;
+  @ViewChild("price") price;
+  constructor(private _service:CrudService) {
+    _service.products$.subscribe(data=>{
+      this.arr = data;
+    })
    }
+   
+   addRecord(){
+    if(this.id.nativeElement.value==""||this.product.nativeElement.value==""||this.price.nativeElement.value=="")
+    alert("All fields are mandatory!!!");
+    else{
+    this.arr.push({
+      id:this.id.nativeElement.value,
+      product:this.product.nativeElement.value,
+      price:this.price.nativeElement.value
+    });
+    this.id.nativeElement.value = "";
+    this.product.nativeElement.value = "";
+    this.price.nativeElement.value = "";
+  }
+  }
 
   ngOnInit(): void {
   }
